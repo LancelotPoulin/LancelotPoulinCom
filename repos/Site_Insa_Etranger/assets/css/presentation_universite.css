@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Raleway:400,800,900");
+
+html, body {
+	min-width: 320px;
+}
+
+body{
+	padding-top: 3.5em;
+	background: #F4F4F4;
+}
+
+a {text-decoration: none }
+
+/* Header de lancelot */
+
+#header {
+	display: flex;
+	justify-content: space-between;
+	background-color: #ffffff;
+	border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+	height: 3.5em;
+	left: 0;
+	line-height: 3.5em;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10000; /* at top of all objects */
+	box-sizing: border-box;
+}
+
+	#header *, #header *:before, #header *:after {
+		box-sizing: inherit;
+	}
+
+	#header ul {
+		margin: 0;
+		padding-left: 0;
+	}
+
+	#header .links {
+		flex: 1;
+		border-left: solid 1px rgba(160, 160, 160, 0.3);
+		padding-left: 1.5em;
+		font-size: 0.8em;
+	}
+
+		#header .links ul li {
+			border-left: solid 1px rgba(160, 160, 160, 0.3);
+			line-height: 1; /* medium bar */
+			margin-left: 1em;
+			padding-left: 1em;
+			display: inline-block;
+		}
+
+			#header .links ul li:first-child { /* first disable */
+				border-left: 0;
+				margin-left: 0;
+				padding-left: 0;
+			}
+
+			#header .links ul li a {
+				border-bottom: 0;
+				font-family: "Raleway", Helvetica, sans-serif;
+				font-weight: 400;
+				letter-spacing: 0.25em;
+				text-transform: uppercase;
+				transition: color 0.2s ease, border-bottom-color 0.2s ease;
+				color: inherit;
+				text-decoration: none;
+			}
+			
+				#header .links ul li a:before {
+					transition: color 0.2s ease;
+				}
+
+				#header .links ul li a:hover, #header .links ul li a:hover:before {
+					border-bottom-color: transparent;
+					color: #E41E13 !important;
+				}
+				
+		#header h1 {
+			line-height: 1.65;
+			margin: 0 0 1em 0;
+		}
+		
+		#header a img {
+				padding: 0.2em 0.3em 0.15em 0.4em;
+				width: 220px;
+				content:url("../../images/logo@medium.png");
+		}
+
+	@media screen and (max-width: 736px) {
+		#header {
+			 height: 3em; 
+			 line-height: 3em; 
+		}
+
+			#header a img {
+				content:url("../../images/logo@small.png");
+				padding: 0.35em 0.5em 0em 0.5em;
+				width: 100px;
+			}
+			
+			#header .links {
+				font-size: 0.6em;
+			}
+	}
+	
+	
+/* les textes d'information bien centrés dans les infos Univ*/
+
+.recap
+{
+	margin-top : auto ;
+	margin-bottom : auto ;
+	margin-left: 15px;
+	margin-right:15px;
+	display : flex ;
+	justify-content : start ;
+	flex-direction : column ;
+}
+
+.info
+{
+	margin-bottom : 10px ;
+	margin-top : 10px ;
+	font-size : 15pt ;
+}
+
+#nomEcole
+{
+	display : flex ;
+	justify-content : start ;
+}
+
+#petitLogo
+{
+	height : 40px ;
+	margin-left: 15px;
+}
+
+.photoUniv
+{
+	height : 300px ;
+	border-radius : 15px ;
+}
+
+#joliBouton
+{
+	background-color: rgb(0,176,80); /*vert*/
+	border-radius: 15px;
+	padding: .25em;
+	text-align: center;
+	width: 80px;
+	box-shadow: 0px 2px 5px #777777;
+	color:white;
+}
+
+#joliBouton:hover
+{
+	background-color: rgb(0,170,77); /*vert plus fonce*/
+}
+
+#conteneur
+{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+/*pour les ordinateurs*/
+@media all and (min-width: 970px) {
+
+
+	/* les <div> infoUniv alternés gauche-droite*/
+	.elementgauche
+	{
+		margin-left : 100px ;
+		display : flex ;
+		justify-content : start ;
+		/*margin-bottom : 50px ;*/
+		margin-top : 20px ;
+	}
+
+	#elementdroit
+	{
+		margin-right : 100px ;
+		display : flex ;
+		justify-content : flex-end ;
+		margin-top : 20px ;
+	}
+	
+
+	#uniTitle 
+	{
+		font-size : 25pt ;
+		margin-left : 70px ;
+	}
+	
+}
+
+/*pour les téléphone*/
+@media all and (max-width: 1024px) {
+	
+		
+	.photoUniv
+	{
+		/*margin-left : 50px ;*/
+		margin-bottom : 30px ;
+		width:98%;
+		height: auto;
+	}
+	
+	#uniTitle 
+	{
+		font-size : 25pt ;
+	}
+	
+	/* les <div> infoUniv les uns en dessous des autres*/
+	.elementgauche
+	{
+		display : flex ;
+		justify-content : center ;
+		margin-bottom : 30px ;
+
+	}
+
+	#elementdroit
+	{
+		display : flex ;
+		justify-content : center ;
+		margin-bottom : 30px ;
+
+		flex-direction : column-reverse ;
+	}
+
+	#e1{
+		flex-direction : column ;
+	}
+	#joliBouton
+	{
+		font-size: 20pt;
+	}
+/*	#infoUniv2
+	{
+		display : flex ;
+		justify-content : start ;
+		margin-bottom : 50px ;
+		flex-direction : column ;
+	}*/
+
+}
+/* Footer */
+
+	#footer {
+		text-align: center;
+		border-top:solid 1px rgba(160,160,160,0.3);
+		margin-top:3em ;
+		padding:3em 0 3em 0;
+	}
+
+	#footer .copyright {
+		color: #aaaaaa;
+		font-family: "Raleway", Helvetica, sans-serif;
+		font-size: 0.5em;
+		font-weight: 400;
+		letter-spacing: 0.25em;
+		text-transform: uppercase;
+	}
